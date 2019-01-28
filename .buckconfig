@@ -1,0 +1,15 @@
+[project]
+  ignore = .git
+
+[parser]
+  default_build_file_syntax = SKYLARK
+
+[cxx]
+  should_remaph_host_platform = true
+  untracked_headers = error
+  untracked_headers_whitelist = /usr/include/.*
+
+[cxx#linux-x86_64]
+  should_remaph_host_platform = true
+  untracked_headers = error
+  untracked_headers_whitelist = /usr/include/.*, allowed-on-linux.hpp
